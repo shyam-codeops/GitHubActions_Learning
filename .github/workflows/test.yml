@@ -18,7 +18,10 @@ jobs:   #---highest structure to design workflow or pipeline in github as cpmapr
 
   build:
    
-    runs-on: self-hosted  # Runners like Agents in ADO  = GitHub Servers
+    runs-on: 
+      - self-hosted
+      - Linux
+      - X64  # Runners like Agents in ADO  = GitHub Servers
 
     steps:
      # - task: in ADO 
