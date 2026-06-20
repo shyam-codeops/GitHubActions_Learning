@@ -15,12 +15,7 @@ permissions:
 jobs:
   terraform:
     name: 'Terraform'
-    # Use 'ubuntu-latest' or uncomment the block below to use your self-hosted runner
     runs-on: ubuntu-latest
-    # runs-on:
-    #   - self-hosted
-    #   - Linux
-    #   - X64
 
     env:
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
@@ -35,7 +30,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
-        terraform_version: 1.9.0 # Use a stable Terraform version
+        terraform_version: 1.9.0 
 
     - name: Terraform Format Check
       id: fmt
