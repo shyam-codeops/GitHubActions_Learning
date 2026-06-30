@@ -47,6 +47,7 @@ jobs:
       
       - name: Terraform Plan
         run: terraform plan -out=tfplan
+        working-directory: ./terraform_infra
 
   Terraform-Deploy:
     name: Infrastructure apply
